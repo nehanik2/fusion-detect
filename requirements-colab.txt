@@ -1,0 +1,16 @@
+# Colab already ships torch/torchvision/CUDA — do NOT reinstall them.
+diffusers>=0.31
+transformers
+accelerate
+sentencepiece
+bitsandbytes>=0.45
+open_clip_torch
+ftfy
+c2pa-python
+piexif
+pyarrow
+pandas
+scikit-learn
+xgboost
+pyyaml
+huggingface_hub

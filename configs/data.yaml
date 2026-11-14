@@ -1,0 +1,26 @@
+seed: 1337
+data_root: data   # overridden by $DATA_DIR (Colab: Drive path)
+
+# Real sources
+real:
+  coco_val2017: {dir: raw/coco/val2017, max_images: 3000}
+  raise:        {dir: raw/raise/tiff,   max_images: 300}    # optional
+
+# AI sources
+ai:
+  genimage:
+    dir: raw/genimage
+    subsets: [ADM, glide, VQDM]   # HF mirrors (bitmind/GenImage_<subset>); fetched by fetch_genimage_hf.py
+    max_images_per_subset: 1500
+  flux_schnell:
+    dir: raw/flux_schnell
+    max_images: 1000
+  chameleon:
+    dir: raw/chameleon      # optional; leave empty if unavailable
+    max_images: 2000
+
+# Cross-generator protocol: these generators appear ONLY in test
+heldout_generators: [flux_schnell, VQDM, chameleon]
+
+# Split ratios for in-distribution sources
+splits: {train: 0.6, cal: 0.2, test: 0.2}

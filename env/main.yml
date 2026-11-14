@@ -1,0 +1,28 @@
+name: fusion-detect
+channels: [pytorch, nvidia, conda-forge]
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+      - diffusers>=0.30
+      - transformers
+      - accelerate
+      - sentencepiece
+      - open_clip_torch
+      - ftfy
+      - c2pa-python
+      - pillow
+      - piexif
+      - numpy
+      - pandas
+      - pyarrow
+      - scikit-learn
+      - xgboost
+      - matplotlib
+      - pyyaml
+      - gdown
+      - wandb
+      - pytest
