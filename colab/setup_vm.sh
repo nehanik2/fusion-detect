@@ -16,3 +16,5 @@ import torch; print("GPU:", torch.cuda.get_device_name(0), "| cap", torch.cuda.g
 PY
 df -h /content | tail -1; free -g | head -2
 echo "[setup] ready. DATA_DIR=$DATA_DIR"
+TOK=/content/drive/MyDrive/fusion-detect/.hf_token
+[ -f "$TOK" ] && hf auth login --token "$(cat $TOK)" >/dev/null 2>&1 && echo "[setup] HF login ok" || echo "!! no HF token on Drive"
